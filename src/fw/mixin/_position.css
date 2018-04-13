@@ -1,0 +1,31 @@
+
+
+// ---------------------------------------------------------------------------
+//
+// Size
+//
+// ---------------------------------------------------------------------------
+
+@define-mixin top( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"top" );
+
+}
+
+@define-mixin right( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"right" );
+
+}
+
+@define-mixin bottom( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"bottom" );
+
+}
+
+@define-mixin left( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"left" );
+
+}

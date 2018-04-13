@@ -1,0 +1,14 @@
+@define-mixin loading $size:25, $width:4, $baseColor:rgba(0,0,0, 0.4), $barColor:rgba(0,0,0, 0.7), $speed:0.6 {
+
+	border: $(width)px solid $baseColor;
+	border-left: $(width)px solid $barColor;
+	animation: loading $(speed)s infinite linear;
+	border-radius: 50%;
+	width: $(size)px;
+	height: $(size)px;
+}
+
+@keyframes loading {
+	0% { transform: rotate(0deg); }
+	100% {transform: rotate(360deg); }
+}

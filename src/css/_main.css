@@ -1,0 +1,43 @@
+body {
+    background: #F7F7F7;
+    div {
+        display: flex;
+        @mixin clearfix;
+    }
+}
+
+@for $count from 1 to 3 {
+    .ab-$(count) {
+        width: $(count)0px;
+        @if $count == 2 {
+            color: red;
+        }
+    }
+}
+
+a { //cssnextのネスト
+    color:red;
+    /* background: rgba(#333333,0.1); */
+    background: #00000033;
+    @mixin transition 0.6, ease;
+    & span { color: #000000; }
+    &:hover { color: #000000; }
+}
+
+/* @callFn .foo { height: rem(640); } */
+
+@media (--tb) {
+    body { background: #999; }
+}
+@media (--tb) {
+    h1 { color: #666; }
+}
+@media (--tb) {
+    h1 { width: calc(100% - 200px); }
+    p { width: calc(10 * 2px); }
+}
+
+@media (--sp) {
+    body { background-color: var(--myColor) }
+    div { width: calc( var(--widthTb) + var(--widthSp) ); }
+}

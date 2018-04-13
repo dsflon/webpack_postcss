@@ -1,0 +1,71 @@
+
+
+// ---------------------------------------------------------------------------
+//
+// margin
+//
+// ---------------------------------------------------------------------------
+@define-mixin mg( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"margin" );
+
+}
+
+@define-mixin mt( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"margin-top" );
+
+}
+
+@define-mixin mr( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"margin-right" );
+
+}
+
+@define-mixin mb( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"margin-bottom" );
+
+}
+
+@define-mixin ml( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"margin-left" );
+
+}
+
+// ---------------------------------------------------------------------------
+//
+// padding
+//
+// ---------------------------------------------------------------------------
+@define-mixin pd( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"padding" );
+
+}
+
+@define-mixin pt( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"padding-top" );
+
+}
+
+@define-mixin pr( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"padding-right" );
+
+}
+
+@define-mixin pb( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"padding-bottom" );
+
+}
+
+@define-mixin pl( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"padding-left" );
+
+}

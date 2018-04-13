@@ -1,0 +1,43 @@
+
+
+// ---------------------------------------------------------------------------
+//
+// Size
+//
+// ---------------------------------------------------------------------------
+
+@define-mixin width( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"width" );
+
+}
+
+@define-mixin minWidth( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"min-width" );
+
+}
+
+@define-mixin maxWidth( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"max-width" );
+
+}
+
+@define-mixin height( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"height" );
+
+}
+
+@define-mixin minHeight( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"min-height" );
+
+}
+
+@define-mixin maxHeight( $val... ) {
+
+	@include SetPerBreakpointStyle( $val, $property:"max-height" );
+
+}

@@ -1,0 +1,39 @@
+
+
+// ---------------------------------------------------------------------------
+//
+// Base Column
+//
+// ---------------------------------------------------------------------------
+@define-mixin column( $class: "f-col", $gutter: $col_gutter ){
+
+	@include clearfix;
+	@include columnGutter( $gutter );
+
+	> * { float:left; }
+
+	@include SetPerBreakpointMixin( $class, $mixin: 'column' );
+
+}
+
+// ---------------------------------------------------------------------------
+//
+// Column margin left and right
+//
+// ---------------------------------------------------------------------------
+@define-mixin columnMg( $class: "f-col" ){
+
+	@include SetPerBreakpointMixin( $class, $mixin: 'columnMg' );
+
+}
+
+// ---------------------------------------------------------------------------
+//
+// Column margin bottom
+//
+// ---------------------------------------------------------------------------
+@define-mixin columnMb( $class: "f-col" ){
+
+	@include SetPerBreakpointMixin( $class, $mixin: 'columnMb' );
+
+}

@@ -1,0 +1,11 @@
+$width_sp: 640;
+$width_tb: 768;
+
+:root {
+    --myColor: #FF0000;
+    --widthSp: 640px;
+    --widthTb: 768px;
+}
+
+@custom-media --tb only screen and ( max-width: $(width_tb)px );
+@custom-media --sp only screen and ( max-width: $(width_sp)px );
