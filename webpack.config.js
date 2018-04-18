@@ -52,7 +52,7 @@ if( process.argv.indexOf("--watch") !== -1 ) mode = 'development';
 if( process.argv.indexOf("webpack-dev-server") !== -1 ) mode = 'development';
 if( process.env.npm_lifecycle_script.split("webpack-dev-server")[1] ) mode = 'development';
 let isDev = (mode === 'development');
-let scssMinimize = (process.env.npm_lifecycle_event !== 'build:dev');
+// let scssMinimize = (process.env.npm_lifecycle_event !== 'build:dev');
 
 module.exports = [
     {
@@ -107,7 +107,8 @@ module.exports = [
                                 options: {
                                     sourceMap: isDev,
                                     importLoaders: 1,
-                                    minimize: scssMinimize
+                                    // minimize: scssMinimize
+                                    minimize: !isDev
                                 }
                             },
                             {

@@ -1,23 +1,50 @@
 module.exports = ({ file, options, env }) => ({
 
-    parser: 'postcss-comment',
+    parser: 'postcss-comment', // スラッシュコメントアウトを/**/に変換する
 
     plugins: {
+
+        // @importを使えるようにする、先頭に設置
         'postcss-import': {},
-        'postcss-cssnext': {},
+
+        // cssnextを利用できるようにする
+        'postcss-cssnext': {
+            // grid: true,
+            browsers: ['last 2 versions']
+        },
+
+        // @define-mixin を利用できるようにする
         'postcss-mixins': {},
+
+        // @define-function、@callFn を利用できるようにする
         'postcss-define-function': {},
-        // 'postcss-calc': {}, //cssnextあればいらない
+
+        // $の変数を使えるようにする
         'postcss-simple-vars': { silent: true },
-        // 'postcss-conditionals': {}, //postcss-advanced-variablesあればいらない
+
+        // forやifを使えるようにする
+        // postcss-advanced-variablesの方が良い？
+        // 'postcss-conditionals': {},
+
+        // forやifを使えるようにする
         'postcss-advanced-variables': {},
+
+        // media query をまとめる
         'css-mqpacker': {},
+
+        // sassタイプのnestが使える
         'postcss-nested': {},
-        // 'autoprefixer': { // postcss-cssnextあるときはこれいらない
+
+        // postcss-cssnextあるときはこれいらない
+        // 'postcss-calc': {},
+
+        // autoprefixer
+        // postcss-cssnextあるときはこれいらない
+        // 'autoprefixer': {
         //     // grid: true,
         //     browsers: ['last 2 versions']
         // },
-        'postcss-reporter': {},
+
         'cssnano': env === 'production' ? options.cssnano : false
     }
 

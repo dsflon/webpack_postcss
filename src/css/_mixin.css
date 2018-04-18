@@ -1,28 +1,8 @@
-/* @import "../fw/mixin/_set_breakpoint.css"; */
-/* @import "../fw/mixin/_media_query.css"; */
 @import "../fw/mixin/_arrow.css";
 @import "../fw/mixin/_clearfix.css";
-/* @import "../fw/mixin/_column.css"; */
-/* @import "../fw/mixin/_column_core.css"; */
-/* @import "../fw/mixin/_diagonal_bg.css"; */
-/* @import "../fw/mixin/_flex.css"; */
-/* @import "../fw/mixin/_flex_core.css"; */
-/* @import "../fw/mixin/_font_size.css"; */
-/* @import "../fw/mixin/_form.css"; */
-/* @import "../fw/mixin/_scrollbar.css"; */
-/* @import "../fw/mixin/_gradients.css"; */
 @import "../fw/mixin/_loading.css";
-/* @import "../fw/mixin/_margin_padding.css"; */
-/* @import "../fw/mixin/_position.css"; */
-/* @import "../fw/mixin/_reset-text.css"; */
-/* @import "../fw/mixin/_size.css"; */
 @import "../fw/mixin/_transition.css";
-/* @import "../fw/mixin/_triangle.css"; */
 
-/* @define-function rem($val) {
-    @return Nuum($val);
-}
-
-@define-function Nuum($val) {
+@define-function rem($val) {
     @return $val / 640 * 10 * 1rem;
-} */
+}

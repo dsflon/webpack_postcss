@@ -2,7 +2,7 @@
 
 @import "_setting.css";
 
-/* @import "../fw/_reset.css"; */
+@import "../fw/_reset.css";
 @import "_mixin.css";
 
 @import "_main.css";

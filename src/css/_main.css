@@ -1,13 +1,29 @@
+
+// sassのネスト
 body {
     background: #F7F7F7;
     div {
-        display: flex;
-        @mixin clearfix;
+        background: #CCC;
     }
 }
 
+// autoprefixer検証
+.flex {
+    display: flex;
+}
+
+
+// cssnextのネスト
+a {
+    color: var(--myColor);
+    & span { color: #000000; }
+    &:hover { color: #000000; }
+}
+
+
+// for & if 構文
 @for $count from 1 to 3 {
-    .ab-$(count) {
+    .for-$(count) {
         width: $(count)0px;
         @if $count == 2 {
             color: red;
@@ -15,29 +31,39 @@ body {
     }
 }
 
-a { //cssnextのネスト
-    color:red;
-    /* background: rgba(#333333,0.1); */
+// cssnextのrgba
+.rgba {
+    /* background: rgba(#333333,0.1); これは不可*/
     background: #00000033;
-    @mixin transition 0.6, ease;
-    & span { color: #000000; }
-    &:hover { color: #000000; }
 }
 
-/* @callFn .foo { height: rem(640); } */
 
+// @define-function の呼び出し
+.mixin {
+    @mixin transition 0.6, ease;
+    @mixin clearfix;
+}
+
+// @define-function の呼び出し
+@callFn .function { height: rem(640); }
+
+// cssnextのcalc例
+.calc { width: calc( var(--widthTb) + var(--widthSp) ); }
+
+
+// media query 結合
 @media (--tb) {
     body { background: #999; }
 }
 @media (--tb) {
-    h1 { color: #666; }
+    .mq { color: #666; }
 }
 @media (--tb) {
-    h1 { width: calc(100% - 200px); }
-    p { width: calc(10 * 2px); }
+    .mq2 { width: calc(100% - 200px); }
+    .mq3 { width: calc(10 * 2px); }
 }
+
 
 @media (--sp) {
     body { background-color: var(--myColor) }
-    div { width: calc( var(--widthTb) + var(--widthSp) ); }
 }
