@@ -29,6 +29,9 @@ module.exports = ({ file, options, env }) => ({
         // forやifを使えるようにする
         'postcss-advanced-variables': {},
 
+        // forを使えるようにする
+        // 'postcss-for': {},
+
         // media query をまとめる
         'css-mqpacker': {},
 
@@ -44,6 +47,15 @@ module.exports = ({ file, options, env }) => ({
         //     // grid: true,
         //     browsers: ['last 2 versions']
         // },
+
+        'postcss-functions': {
+            functions: {
+                pxToVmin: (value) => {
+                    const basePx = 375 * 0.01;
+                    return `${value / basePx}vmin`;
+                },
+            }
+        },
 
         'cssnano': env === 'production' ? options.cssnano : false
     }
