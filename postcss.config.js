@@ -50,7 +50,7 @@ module.exports = ({ file, options, env }) => ({
 
         'postcss-functions': {
             functions: {
-                pxToVmin: (value) => {
+                pxtovmin: (value) => {
                     const basePx = 375 * 0.01;
                     return `${value / basePx}vmin`;
                 },

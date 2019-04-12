@@ -12,7 +12,7 @@ body {
     display: flex;
 
     // postcss-functions検証
-    font-size: pxToVmin(10);
+    font-size: pxtovmin(10);
 }
 
 
@@ -76,7 +76,7 @@ a {
 .element-col span {
     display: block;
     border: 1px solid #CCC;
-    padding: 15px 0;
+    padding: 15px;
     background: #F7F7F7;
     text-align: center;
 }
