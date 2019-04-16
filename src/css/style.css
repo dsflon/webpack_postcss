@@ -4,7 +4,7 @@
 
 @import "../fw/_reset.css";
 @import "_mixin.css";
-@import "_column.css";
+@import "_grid.css";
 
 @import "_main.css";
 @import "sample/_sample.css";
